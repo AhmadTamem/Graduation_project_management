@@ -14,6 +14,7 @@ Route::controller(AuthController::class)->group(function (){
     Route::post('login','login');
     Route::get('profile','profile')->middleware('auth:sanctum');
     Route::get('logout','logout')->middleware('auth:sanctum');
+    Route::get('get_supervisor','supervisor');
 });
 Route::controller(ProjectController::class)->group(function () {
    Route::post('store_project','store')->middleware('auth:sanctum');

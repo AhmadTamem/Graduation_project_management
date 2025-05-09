@@ -90,4 +90,23 @@ class AuthController extends Controller
             return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
         }
     }
+
+    public function supervisor()
+{
+    try {
+    
+        $users = User::where('type', 'supervisor')->get();
+
+        return response()->json([
+            'status' => 'success', 
+            'message' => 'Successfully retrieved supervisors', 
+            'data' => $users 
+        ], 200);
+    } catch (Exception $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $e->getMessage()
+        ], 500);
+    }
+}
 }
