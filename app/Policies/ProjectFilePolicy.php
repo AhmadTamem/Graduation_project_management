@@ -18,3 +18,8 @@ class ProjectFilePolicy
         return $user->type === 'committee_head' || $user->type === 'admin'||$user->type === 'student';
     }
 }
+
+
+
+
+

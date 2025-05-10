@@ -24,7 +24,7 @@ class ProjectPolicy
         }
         public function show(User $user)
         {
-            return $user->type === 'committee_head' || $user->type=== 'admin' || $user->type==='supervisor';
+            return $user->type === 'committee_head' || $user->type=== 'admin' || $user->type==='supervisor' || $user->type === 'student';
         }
         
     
